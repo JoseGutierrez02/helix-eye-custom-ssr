@@ -38,11 +38,13 @@ export const MenuContainer = styled.menu`
     font-size: 1.5rem;
     display: inline-block;
     width: 40px;
+    align-self: flex-end;
     cursor: pointer;
   }
 
   ul {
     color: white;
+    padding: 0;
     font-size: 2rem;
     list-style: none;
     display: flex;

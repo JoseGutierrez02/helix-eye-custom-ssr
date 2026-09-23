@@ -18,7 +18,7 @@ if (isDev) {
 
 module.exports = {
   name: 'client',
-  entry: './src/app/index.tsx',
+  entry: entries,
   mode,
   devtool: isDev ? 'eval-source-map' : undefined,
   stats: 'errors-only',

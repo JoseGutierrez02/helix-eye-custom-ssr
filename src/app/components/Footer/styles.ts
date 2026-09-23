@@ -8,7 +8,7 @@ export const StyledFooter = styled.footer`
   background: #2646A6;
   color: white;
   text-align: center;
-  margin-top: 6.4rem;
+  margin-top: auto;
 
   & > p > a {
     color: cyan;

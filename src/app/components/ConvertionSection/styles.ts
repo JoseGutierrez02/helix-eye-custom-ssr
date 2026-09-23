@@ -6,6 +6,7 @@ export const StyledConversionSection = styled.section`
   grid-template-columns: 1fr;
   grid-template-areas: 'picture' 'title' 'button';
   margin-top: 100px;
+  margin-bottom: 3rem;
   justify-items: center;
 
   & > .title {

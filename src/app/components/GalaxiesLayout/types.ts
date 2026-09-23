@@ -15,6 +15,7 @@ export interface GalaxyData {
 
 export interface GalaxiesProps {
   galaxies?: GalaxyData[]
+  status?: 'loading' | 'error' | 'ready'
 }
 
 declare global {
