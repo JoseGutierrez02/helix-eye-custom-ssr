@@ -5,8 +5,9 @@ import { Menu } from '../components/Menu';
 import { Home } from '../pages/Home';
 import { Galaxies } from '../pages/Galaxies';
 import { Footer } from '../components/Footer';
+import { GalaxiesProps } from '../components/GalaxiesLayout/types';
 
-export const App = (props) => {
+export const App = (props: GalaxiesProps) => {
   return (
     <>
       <GlobalStyles />

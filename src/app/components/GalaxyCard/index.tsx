@@ -12,7 +12,7 @@ export const GalaxyCard = ({ galaxy }: GalaxyCardProps) => {
   const galaxyData = galaxy.data[0]
   const galaxyImage = galaxy.links?.length ? galaxy.links[0].href : 'https://i.imgur.com/GHqELEK.jpeg'
 
-  const renderMediaTypeIcon = (mediaType: string) => {
+  const renderMediaTypeIcon = (mediaType: 'image' | 'video' | 'audio' | '') => {
     const mediaIcon = {
       'image': faImage,
       'video': faVideo,
@@ -25,12 +25,12 @@ export const GalaxyCard = ({ galaxy }: GalaxyCardProps) => {
       'audio': 'Audio'
     }
 
-    const icon = mediaIcon[mediaType]
+    const icon = mediaType ? mediaIcon[mediaType] : undefined
 
     if (icon) {
       return (
         <div className='icon'>
-          <FontAwesomeIcon icon={icon} /> <span>{mediaTranslation[mediaType]}</span>
+          <FontAwesomeIcon icon={icon} /> <span>{mediaType && mediaTranslation[mediaType]}</span>
         </div>
       )
     }

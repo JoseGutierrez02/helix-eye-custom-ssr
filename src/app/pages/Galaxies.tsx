@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { GalaxiesLayout } from '../components/GalaxiesLayout';
 import { LoadingSpinner } from '../components/LoadingSpinner';
-import { LOADING_STATUS, ERROR_STATUS, useFetchGalaxiesInfo } from '../hooks/useFetchGalaxiesInfo';
+import { GalaxiesProps } from '../components/GalaxiesLayout/types';
 
 const GalaxiesPageWrapper = styled.div`
   display: flex;
@@ -11,12 +11,10 @@ const GalaxiesPageWrapper = styled.div`
   width: calc(100% - 6rem);
 `
 
-export const Galaxies = (props) => {
-
-  const { galaxies, requestStatus } = useFetchGalaxiesInfo()
+export const Galaxies = (props: GalaxiesProps) => {
 
   const renderLayout = () => {
-    if (props.galaxies.length === 0) return <LoadingSpinner />
+    if (props.galaxies && props.galaxies.length === 0) return <LoadingSpinner />
 
     return <GalaxiesLayout galaxies={props.galaxies} />
   }

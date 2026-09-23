@@ -6,8 +6,11 @@ import './assets/favicon.ico'
 
 const container = document.getElementById('app');
 
+if (!container) {
+  throw new Error('No se encontró el contenedor #app');
+}
+
 const initialProps = window.__INITIAL_PROPS__ || {}
-console.log('initialProps', initialProps)
 
 hydrateRoot(
   container,
